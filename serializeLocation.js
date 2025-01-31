@@ -13,19 +13,19 @@ const readJSONFile = (file) => {
 
 const provinceHashMap = hashMap(
   readJSONFile(
-    "/home/sthasam/Programming/Work/Freelance/AutoEcommerce/auto-ecommerce-backend/data/provinces.json",
+    "./data/provinces.json",
   ),
 );
 
 const districtHashMap = hashMap(
   readJSONFile(
-    "/home/sthasam/Programming/Work/Freelance/AutoEcommerce/auto-ecommerce-backend/data/districts.json",
+    "./data/districts.json",
   ),
 );
 
 const municipalitiesHashMap = hashMap(
   readJSONFile(
-    "/home/sthasam/Programming/Work/Freelance/AutoEcommerce/auto-ecommerce-backend/data/municipalities.json",
+    "./data/municipalities.json",
   ),
 );
 
@@ -65,6 +65,6 @@ const provinceDistrictHashMap = Object.keys(districtHashMap).reduce(
 );
 
 fs.writeFileSync(
-  "/home/sthasam/Programming/Work/Freelance/AutoEcommerce/auto-ecommerce-backend/data/geoLocation.json",
+  "./data/geoLocation.json",
   JSON.stringify(provinceDistrictHashMap),
 );
